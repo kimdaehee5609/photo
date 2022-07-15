@@ -1,0 +1,10 @@
+*.aux
+*.fls
+*.log
+*.maf
+*.ptc*
+*.mtc*
+*.out
+*.toc
+*.lot
+*.gz
