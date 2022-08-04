@@ -1,0 +1,720 @@
+%	-------------------------------------------------------------------------------
+% 
+%			2020년 
+%			12월 
+%			30일 
+%			수요일
+%			첫작업
+%
+%
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%	\documentclass[12pt, a3paper, oneside]{book}
+	\documentclass[12pt, a4paper, oneside]{book}
+%	\documentclass[12pt, a4paper, landscape, oneside]{book}
+
+		% --------------------------------- 페이지 스타일 지정
+		\usepackage{geometry}
+%		\geometry{landscape=true	}
+		\geometry{top 			=10em}
+		\geometry{bottom			=10em}
+		\geometry{left			=8em}
+		\geometry{right			=8em}
+		\geometry{headheight		=4em} % 머리말 설치 높이
+		\geometry{headsep		=2em} % 머리말의 본문과의 띠우기 크기
+		\geometry{footskip		=4em} % 꼬리말의 본문과의 띠우기 크기
+% 		\geometry{showframe}
+	
+%		paperwidth 	= left + width + right (1)
+%		paperheight 	= top + height + bottom (2)
+%		width 		= textwidth (+ marginparsep + marginparwidth) (3)
+%		height 		= textheight (+ headheight + headsep + footskip) (4)	
+
+
+
+		%	=================================================================== package
+		%	package
+		%	===================================================================
+%			\usepackage[hangul]{kotex}				% 한글 사용
+			\usepackage{kotex}					% 한글 사용
+			\usepackage[unicode]{hyperref}			% 한글 하이퍼링크 사용
+
+		% ------------------------------ 수학 수식
+			\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+			\usepackage{mathtools}				% amsmath 확장판
+
+			\usepackage{scrextend}				% 
+		
+
+		% ------------------------------ LIST
+			\usepackage{enumerate}			%
+			\usepackage{enumitem}			%
+			\usepackage{tablists}				%	수학문제의 보기 등을 표현하는데 사용
+										%	tabenum
+
+
+		% ------------------------------ table 
+			\usepackage{longtable}			%
+			\usepackage{tabularx}			%
+			\usepackage{tabu}				%
+
+
+
+
+		% ------------------------------ 
+			\usepackage{setspace}			%
+			\usepackage{booktabs}		% table
+			\usepackage{color}			%
+			\usepackage{multirow}			%
+			\usepackage{boxedminipage}	% 미니 페이지
+			\usepackage[pdftex]{graphicx}	% 그림 사용
+			\usepackage[final]{pdfpages}		% pdf 사용
+			\usepackage{framed}			% pdf 사용
+
+			
+			\usepackage{fix-cm}	
+			\usepackage[english]{babel}
+	
+		%	======================================================================================= package
+		% 	tikz package
+		% 	
+		% 	--------------------------------- 	
+			\usepackage{tikz}%
+			\usetikzlibrary{arrows,positioning,shapes}
+			\usetikzlibrary{mindmap}			
+			
+
+		% --------------------------------- 	page
+			\usepackage{afterpage}		% 다음페이지가 나온면 어떻게 하라는 명령 정의 패키지
+%			\usepackage{fullpage}			% 잘못 사용하면 다 흐트러짐 주의해서 사용
+%			\usepackage{pdflscape}		% 
+			\usepackage{lscape}			%	 
+
+
+			\usepackage{blindtext}
+	
+		% --------------------------------- font 사용
+			\usepackage{pifont}				%
+			\usepackage{textcomp}
+			\usepackage{gensymb}
+			\usepackage{marvosym}
+
+
+
+		% Package --------------------------------- 
+
+			\usepackage{tablists}				%
+
+
+		% Package --------------------------------- 
+			\usepackage[framemethod=TikZ]{mdframed}				% md framed package
+			\usepackage{smartdiagram}								% smart diagram package
+
+			\newcounter{theo}[section]\setcounter{theo}{0}
+			\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+%			\newenvironment{name}[args]{begin_def}{end_def}
+
+ 
+  
+
+
+		% Package ---------------------------------    연습문제 
+
+			\usepackage{exsheets}				%
+
+			\SetupExSheets{solution/print=true}
+			\SetupExSheets{question/type=exam}
+			\SetupExSheets[points]{name=point,name-plural=points}
+
+
+		% --------------------------------- 페이지 스타일 지정
+
+		\usepackage[Sonny]		{fncychap}
+
+			\makeatletter
+			\ChNameVar	{\Large\bf}
+			\ChNumVar	{\Huge\bf}
+			\ChTitleVar		{\Large\bf}
+			\ChRuleWidth	{0.5pt}
+			\makeatother
+
+%		\usepackage[Lenny]		{fncychap}
+%		\usepackage[Glenn]		{fncychap}
+%		\usepackage[Conny]		{fncychap}
+%		\usepackage[Rejne]		{fncychap}
+%		\usepackage[Bjarne]	{fncychap}
+%		\usepackage[Bjornstrup]{fncychap}
+
+		\usepackage{fancyhdr}
+		\pagestyle{fancy}
+		\fancyhead{} % clear all fields
+		\fancyhead[LO]{\footnotesize \leftmark}
+		\fancyhead[RE]{\footnotesize \leftmark}
+		\fancyfoot{} % clear all fields
+		\fancyfoot[LE,RO]{\large \thepage}
+		%\fancyfoot[CO,CE]{\empty}
+		\renewcommand{\headrulewidth}{1.0pt}
+		\renewcommand{\footrulewidth}{0.4pt}
+	
+	
+	
+		%	--------------------------------------------------------------------------------------- 
+		% 	tritlesec package
+		% 	
+		% 	
+		% 	------------------------------------------------------------------ section 스타일 지정
+	
+			\usepackage{titlesec}
+		
+		% 	----------------------------------------------------------------- section 글자 모양 설정
+			\titleformat*{\section}					{\large\bfseries}
+			\titleformat*{\subsection}				{\normalsize\bfseries}
+			\titleformat*{\subsubsection}			{\normalsize\bfseries}
+			\titleformat*{\paragraph}				{\normalsize\bfseries}
+			\titleformat*{\subparagraph}				{\normalsize\bfseries}
+	
+		% 	----------------------------------------------------------------- section 번호 설정
+			\renewcommand{\thepart}				{\arabic{part}.}
+			\renewcommand{\thesection}				{\arabic{section}.}
+			\renewcommand{\thesubsection}			{\thesection\arabic{subsection}.}
+			\renewcommand{\thesubsubsection}		{\thesubsection\arabic{subsubsection}}
+			\renewcommand\theparagraph 			{$\blacksquare$ \hspace{3pt}}
+
+		% 	----------------------------------------------------------------- section 페이지 나누기 설정
+			\let\stdsection\section
+			\renewcommand\section{\newpage\stdsection}
+
+
+
+		%	--------------------------------------------------------------------------------------- 
+		% 	\titlespacing*{commandi} {left} {before-sep} {after-sep} [right-sep]		
+		% 	left
+		%	before-sep		:  수직 전 간격
+		% 	after-sep	 	:  수직으로 후 간격
+		%	right-sep
+
+			\titlespacing*{\section} 			{0pt}{1.0em}{1.0em}
+			\titlespacing*{\subsection}	  		{0ex}{1.0em}{1.0em}
+			\titlespacing*{\subsubsection}		{0ex}{1.0em}{1.0em}
+			\titlespacing*{\paragraph}			{0em}{1.5em}{1.0em}
+			\titlespacing*{\subparagraph}		{4em}{1.0em}{1.0em}
+	
+		%	\titlespacing*{\section} 			{0pt}{0.0\baselineskip}{0.0\baselineskip}
+		%	\titlespacing*{\subsection}	  		{0ex}{0.0\baselineskip}{0.0\baselineskip}
+		%	\titlespacing*{\subsubsection}		{6ex}{0.0\baselineskip}{0.0\baselineskip}
+		%	\titlespacing*{\paragraph}			{6pt}{0.0\baselineskip}{0.0\baselineskip}
+	
+
+		% --------------------------------- recommend		섹션별 페이지 상단 여백
+			\newcommand{\SectionMargin}				{\newpage  \null \vskip 2cm}
+			\newcommand{\SubSectionMargin}			{\newpage  \null \vskip 2cm}
+			\newcommand{\SubSubSectionMargin}		{\newpage  \null \vskip 2cm}
+
+
+		%	--------------------------------------------------------------------------------------- 
+		%
+		% 	toc 설정  - table of contents
+		% 	
+		% 	
+		% 	----------------------------------------------------------------  문서 기본 사항 설정
+			\setcounter{secnumdepth}{0} 		% 문단 번호 깊이 chapter
+			\setcounter{secnumdepth}{1} 		% 문단 번호 깊이 section
+			\setcounter{secnumdepth}{2} 		% 문단 번호 깊이 subsection
+			\setcounter{secnumdepth}{3} 		% 문단 번호 깊이 subsubsec
+			\setcounter{secnumdepth}{4} 		% 문단 번호 깊이 paragraph
+			\setcounter{secnumdepth}{5} 		% 문단 번호 깊이 subparagraph
+			\setcounter{tocdepth}{2} 			% 문단 번호 깊이 - 목차 출력시 출력 범위
+
+			\setlength{\parindent}{0cm} 		% 문서 들여 쓰기를 하지 않는다.
+
+
+		%	--------------------------------------------------------------------------------------- 
+		% 	mini toc 설정
+		% 	
+		% 	
+		% 	--------------------------------------------------------- 장의 목차  minitoc package
+			\usepackage{minitoc}
+
+%			\setcounter{minitocdepth}{0}    	% 	chapter 
+			\setcounter{minitocdepth}{1}    	%  	secton
+%			\setcounter{minitocdepth}{2}    	%  	subsection
+%			\setcounter{minitocdepth}{3}    	%  	sub sub section
+%			\setcounter{minitocdepth}{4}    	%  	paragraph
+%			\setcounter{minitocdepth}{5}    	%  	sub paragraph
+%			\setlength{\mtcindent}{12pt} 		%	default 24pt
+			\setlength{\mtcindent}{24pt} 		% 	default 24pt
+
+		% 	--------------------------------------------------------- part toc
+		%	\setcounter{parttocdepth}{2} 		%  default
+			\setcounter{parttocdepth}{0}
+		%	\setlength{\ptcindent}{0em}		%  default  목차 내용 들여 쓰기
+			\setlength{\ptcindent}{0em}         
+
+
+		% 	--------------------------------------------------------- section toc
+			\renewcommand{\ptcfont}{\normalsize\rm} 		%  default
+			\renewcommand{\ptcCfont}{\normalsize\bf} 	%  default
+			\renewcommand{\ptcSfont}{\normalsize\rm} 	%  default
+
+		% 	--------------------------------------------------------- section toc
+%			\setcounter{sectiondepth}{2}
+%			\setcounter{\secttocdepth}{2}				% default
+%			\setlength{\stcindent}{24pt}				% default
+%			\renewcommand{\stcfont}{f\small\rm}		% default
+%			\renewcommand{\stcSSfont}{f\small\bf} 	% default
+
+
+		%	=======================================================================================
+		% 	tocloft package
+		% 	
+		% 	------------------------------------------ 목차의 목차 번호와 목차 사이의 간격 조정
+			\usepackage{tocloft}
+
+		% 	------------------------------------------ 목차의 내어쓰기 즉 왼쪽 마진 설정
+			\setlength{\cftsecindent}{2em}			%  section
+
+		% 	------------------------------------------ 목차의 목차 번호와 목차 사이의 간격 조정
+			\setlength{\cftsecnumwidth}{2em}		%  section
+
+
+
+
+
+		%	=======================================================================================
+		% 	flowchart  package
+		% 	
+		% 	------------------------------------------ 목차의 목차 번호와 목차 사이의 간격 조정
+			\usepackage{flowchart}
+			\usetikzlibrary{arrows}
+
+		%	======================================================================================= 
+		% 	t color box
+		% 	
+		% 	------------------------------------------ 상자안에 강조 문자
+			\usepackage{tcolorbox}
+%			\usepackage[listings]{tcolorbox}
+			\tcbuselibrary{raster}
+			\tcbuselibrary{breakable}
+
+		%	=======================================================================================  코드 입력
+			\usepackage[]{quoting}
+			\usepackage{csquotes}		%
+			\usepackage{epigraph}		%
+			\usepackage{epigraph}		%
+
+			\usepackage{epigraph}		% 	 \begin{savequote}[45mm]
+										%		\qauthor{Shakespeare, Macbeth}
+										%		Cookies! Give me some cookies!
+										%		\qauthor{Cookie Monster}
+										%	\end{savequote}
+
+										%	\begin{quote}
+										%	\lipsum[1-2]
+										%	\end{quote}
+
+										%	\begin{quotation}
+										%	\lipsum[1-2]
+										%	\end{quotation}
+
+										%	\begin{quoting}
+										%	\lipsum[1-2]
+										%	\end{quoting}
+
+										%	\begin{verbatim}
+										%		core.ignorecase=true
+										%	\end{verbatim}
+
+
+
+		%	=======================================================================================
+		% 		makeindex package
+		% 	
+		% 	------------------------------------------ 목차의 목차 번호와 목차 사이의 간격 조정
+%			\usepackage{makeindex}
+%			\usepackage{makeidy}
+
+
+
+		%	=======================================================================================
+		% 		각주와 미주
+		% 	
+
+		\usepackage{endnotes} %미주 사용
+
+
+		%	=======================================================================================
+		% 	줄 간격 설정
+		% 	
+		% 	
+		% 	--------------------------------- 	줄간격 설정
+			\doublespace
+%			\onehalfspace
+%			\singlespace
+		
+		
+
+	% 	============================================================================== itemi Global setting
+
+	
+		%	-------------------------------------------------------------------------------
+		%		Vertical spacing
+		%	-------------------------------------------------------------------------------
+			\setlist[itemize]{topsep=0.0em}			% 상단의 여유치
+			\setlist[itemize]{partopsep=0.0em}			% 
+			\setlist[itemize]{parsep=0.0em}			% 
+%			\setlist[itemize]{itemsep=0.0em}			% 
+			\setlist[itemize]{noitemsep}				% 
+			
+		%	-------------------------------------------------------------------------------
+		%		Horizontal spacing
+		%	-------------------------------------------------------------------------------
+			\setlist[itemize]{labelwidth=1em}			%  라벨의 표시 폭
+			\setlist[itemize]{leftmargin=8em}			%  본문 까지의 왼쪽 여백  - 4em
+			\setlist[itemize]{labelsep=3em} 			%  본문에서 라벨까지의 거리 -  3em
+			\setlist[itemize]{rightmargin=0em}			% 오른쪽 여백  - 4em
+			\setlist[itemize]{itemindent=0em} 			% 점 내민 거리 label sep 과 같은면 점위치 까지 내민다
+			\setlist[itemize]{listparindent=3em}		% 본문 드려쓰기 간격
+	
+	
+			\setlist[itemize]{ topsep=0.0em, 			%  상단의 여유치
+						partopsep=0.0em, 		%  
+						parsep=0.0em, 
+						itemsep=0.0em, 
+						labelwidth=1em, 
+						leftmargin=2.5em,
+						labelsep=2em,			%  본문에서 라벨 까지의 거리
+						rightmargin=0em,		% 오른쪽 여백  - 4em
+						itemindent=0em, 		% 점 내민 거리 label sep 과 같은면 점위치 까지 내민다
+						listparindent=0em}		% 본문 드려쓰기 간격
+	
+%			\begin{itemize}
+	
+		%	-------------------------------------------------------------------------------
+		%		Label
+		%	-------------------------------------------------------------------------------
+			\renewcommand{\labelitemi}{$\bullet$}
+			\renewcommand{\labelitemii}{$\bullet$}
+%			\renewcommand{\labelitemii}{$\cdot$}
+			\renewcommand{\labelitemiii}{$\diamond$}
+			\renewcommand{\labelitemiv}{$\ast$}		
+	
+%			\renewcommand{\labelitemi}{$\blacksquare$}   	% 사각형 - 찬것
+%			\renewcommand\labelitemii{$\square$}		% 사각형 - 빈것	
+			
+
+
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------ 표지
+	\begin{document}
+	
+			\dominitoc
+			\doparttoc			
+
+%			\dosecttoc
+%			\dosectlof
+%			\dosectlot
+
+			\title{ Git Gitlab  }
+			\author{김대희}
+			\date{ 	2020년 
+					12월 
+					30일
+					수요일
+						}
+			\maketitle
+
+
+			\tableofcontents 		% 목차 출력
+%			\listoffigures 			% 그림 목차 출력
+			\cleardoublepage
+			\listoftables 			% 표 목차 출력
+
+
+
+
+
+		\mdfdefinestyle	{con_specification} {
+						outerlinewidth		=1pt			,%
+						innerlinewidth		=2pt			,%
+						outerlinecolor		=blue!70!black	,%
+						innerlinecolor		=white 			,%
+						roundcorner			=4pt			,%
+						skipabove			=1em 			,%
+						skipbelow			=1em 			,%
+						leftmargin			=0em			,%
+						rightmargin			=0em			,%
+						innertopmargin		=2em 			,%
+						innerbottommargin 	=2em 			,%
+						innerleftmargin		=1em 			,%
+						innerrightmargin		=1em 			,%
+						backgroundcolor		=gray!4			,%
+						frametitlerule		=true 			,%
+						frametitlerulecolor	=white			,%
+						frametitlebackgroundcolor=black		,%
+						frametitleaboveskip=1em 			,%
+						frametitlebelowskip=1em 			,%
+						frametitlefontcolor=white 			,%
+						}
+
+
+%	개정일력
+%	2020.12.30 첫 작업
+%	2020.12.30 깃 업로드
+%
+
+
+%	================================================================== Part			개요
+	\addtocontents{toc}{\protect\newpage}
+	\part{ 개요  }
+	\noptcrule
+	\parttoc				
+
+% ----------------------------------------------------------------------------- 	깃 시작하기
+%										
+% -----------------------------------------------------------------------------										
+	\section{ 깃 시작하기 }
+
+
+% ----------------------------------------------------------------------------- 	깃랩
+%										
+% -----------------------------------------------------------------------------										
+	\section{ Gitlab }
+
+	\paragraph{}
+Gitlab은 Git의 원격 저장소 기능과 이슈 트래커 기능등을 제공하는 소프트웨어다. 설치형 Github라는 컨셉으로 시작된 프로젝트이기 때문에 Github와 비슷한 면이 많이 있다. 서비스 형 원격저장소를 운영하는 것에 대한 비용이 부담되거나, 소스코드의 보안이 중요한 프로젝트에게 적당하다. 
+
+
+							
+
+	\paragraph{Gitlab의 특징}
+
+
+			\begin{itemize}
+			\item 	설치형 버전관리 시스템 - 자신의 서버에 직접 설치해서 사용할 수 있다. 
+			\item 	클라우드 버전 관리 시스템 - gitlab.com을 이용하면 서버 없이도 Gitlab의 기능을 이용할 수 있다. 10명 이하의 프로젝트는 무료로 사용할 수 있다. 
+			\item 	Issue tracker 제공
+			\item 	Git 원격 저장소 제공
+			\item 	API 제공 
+			\item 	Team, Group 기능 제공
+			\end{itemize}
+
+
+
+
+
+
+% ----------------------------------------------------------------------------- 	깃랩설치하기
+%	
+% -----------------------------------------------------------------------------	
+	\chapter 	{깃랩 설치하기}
+
+
+
+% ----------------------------------------------------------------------------- 	깃랩설치하기
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{깃랩 설치하기}
+
+
+% ----------------------------------------------------------------------------- 	깃랩세팅
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{깃랩 세팅}
+
+% ----------------------------------------------------------------------------- 	깃랩설치확인
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{깃랩 설치 확인}
+
+
+
+
+
+	
+%	================================================================== 		깃랩전체기능
+	\addtocontents{toc}{\protect\newpage}
+	\chapter {깃랩 전체 기능 }
+	\noptcrule
+
+%	\newpage	
+%	\minitoc
+%	\secttoc
+
+
+
+% ----------------------------------------------------------------------------- 	저장소 생성
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{저장소 생성 :  git init}
+
+
+% ----------------------------------------------------------------------------- 	git add
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{git add}
+
+
+% ----------------------------------------------------------------------------- 	git commit
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{git commit}
+
+
+% ----------------------------------------------------------------------------- 	git status
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{git status}
+
+
+% ----------------------------------------------------------------------------- 	저장소 사용을 위한 명령
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{저장소 사용을 위한 명령}
+
+
+%	================================================================== 		깃랩프로젝트
+	\addtocontents{toc}{\protect\newpage}
+	\chapter {Gitlab Project}
+	\noptcrule
+
+%	\newpage	
+	\minitoc
+%	\secttoc
+
+% ----------------------------------------------------------------------------- 	 Git 기본 설정
+%	
+% -----------------------------------------------------------------------------	
+	\section 	{ Git 기본 설정}
+
+
+	각자의 이름과 이메일 주소를 적는다
+
+
+		% ------------------------------------------------- tcolorbox package
+		\begin{tcolorbox}		[
+%								colback=green!5,
+								colback=red!5!white,
+								colframe=red!75!black,
+%								colframe=green!40!black,
+								title=깃 기본 설정
+								]
+			\$git config --glabal user.name  "kim dae hee 5609 " \\
+			\$git config --glabal user.email  "h 010 3839 5609 @ gmail . com" \\
+			\$git config --glabal color.ui true
+		\end{tcolorbox}
+
+
+		\begin{tcolorbox}
+			- global : 지금 로그온한 계정에 전체 설정 \\
+			- local : 현재 저장소 로컬 설정
+		\end{tcolorbox}
+
+
+
+%	================================================================== Part		깃랩이슈
+	\addtocontents{toc}{\protect\newpage}
+	\chapter 	{GitLab Issues}
+
+	\noptcrule
+	\minitoc
+				
+
+% ----------------------------------------------------------------------------- 	git ignore 란
+%										
+% -----------------------------------------------------------------------------										
+	\section{git ignore 란}
+
+
+		gitignore 파일이란 git버전관리에서 제외할 파일 목록을 지정하는 파일이다.
+
+git으로 프로젝트를 관리할때, 그 프로젝트 안의 특정 파일을 관리할 필요가 없는 경우가 있다.
+에를 들어 프로젝트 설정파일, 자동으로 생성되는 로그파일, 빌드인할때 생기는 컴파일 파일 등이 있다.
+따라서 이러 관리할 필요가 없는 파일을 git이 track하지 않도록 .git ignore를 설정하는 것이다.
+
+
+
+
+
+
+
+
+
+
+
+%	================================================================== Part			깃랩위키
+	\addtocontents{toc}{\protect\newpage}
+	\part 	{Gitlab wiki}
+
+
+	\noptcrule
+	\parttoc	
+	\minitoc
+				
+
+
+
+
+
+%	================================================================== Part			팀그룹권한
+	\addtocontents{toc}{\protect\newpage}
+	\part 	{팀 그룹 권한 }
+	\noptcrule
+	\parttoc				
+
+			
+
+
+
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+\end{document}
+
+
+	\href{https://www.youtube.com/watch?v=SpqKCQZQBcc}{태양경배자세A}
+	\href{https://www.youtube.com/watch?v=CL3czAIUDFY}{태양경배자세A}
+
+
+https://docs.google.com/spreadsheets/d/1-wRuFU1OReWrtxkhaw9uh5mxouNYRP8YFgykMh2G_8c/edit#gid=0
++
+
+https://seoyeongcokr-my.sharepoint.com/:f:/g/personal/02017_seoyoungeng_com/Ev8nnOI89D1LnYu90SGaVj0BTuckQ46vQe1HiVv-R4qeqQ?e=S3iAHi
+
+
+		\begin{tcolorbox}[title=My title,
+		colback=red!5!white,
+		colframe=red!75!black,
+		colbacktitle=yellow!50!red,
+		coltitle=red!25!black,
+		fonttitle=\bfseries,
+		subtitle style={boxrule=0.4pt,
+		colback=yellow!50!red!25!white} ]
+		This is a \textbf{tcolorbox}.
+		\tcbsubtitle{My subtitle}
+		Further text.
+		\tcbsubtitle{Second subtitle}
+		Further text.
+		\end{tcolorbox}
+		
+
+		\begin{tcbraster}[raster columns=3, raster equal height,
+		size=small,colframe=red!50!black,colback=red!10!white,colbacktitle=red!50!white,
+		title={Box \# \thetcbrasternum}]
+			\begin{tcolorbox}First box\end{tcolorbox}
+			\begin{tcolorbox}Second box\end{tcolorbox}
+			\begin{tcolorbox}This is a box\\with a second line\end{tcolorbox}
+			\begin{tcolorbox}Another box\end{tcolorbox}
+			\begin{tcolorbox}A box again\end{tcolorbox}
+		\end{tcbraster}

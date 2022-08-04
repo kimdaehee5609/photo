@@ -1,0 +1,650 @@
+%	-------------------------------------------------------------------------------
+%
+%
+%		작성
+%		2020년
+%		08월
+%		13일
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+\documentclass[aspectratio=1610,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{5} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{5} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{금정 동문회  }
+
+			\author{김대희}
+
+			\date{2020년 
+					08월 
+					13일
+					목요일 }
+
+
+	%	==========================================================
+	%		개정 이력
+	%	----------------------------------------------------------
+	%	2020.08.13 첫 작성
+	%	----------------------------------------------------------
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+
+%		\begin{frame} [plain]{목차}
+		\begin{frame} {목차}
+		\tableofcontents
+		\end{frame}
+
+	%	========================================================== 	개요
+	%		Frame
+	%	----------------------------------------------------------
+		\part{개요 }
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{선문화관 봉사 }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {선문화관 봉사 }
+			\begin{itemize}
+				\item 7시 39 출발 초량역
+				\item 8시 16분 노포 도착
+				\item 8시 19분 버스 탑승
+				\item 8시 47분 문화관 도착
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	========================================================== 	봉사
+	%		Frame
+	%	----------------------------------------------------------
+		\part{봉사 }
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{8월  }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {8월 }
+			\begin{itemize}
+					\item [03] 월 백중기도 발열체크
+					\item [07] 금 지장재일 발열체크
+					\item [17] 월 백중기도 발열체크
+					\item [30] 일 범어사 계곡 환경 정리
+					\item [31] 월 백중기도 발열체크
+
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{9월  }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {9월 }
+			\begin{itemize}
+					\item [05] 토 	백중기도 화향 지장재일 발열체크
+					\item [17] 목 	범어사 초하루법회 발열체크
+					\item 자비의 일일찻집 행사 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{10월  }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {10월 }
+			\begin{itemize}
+					\item [04] 일	지장재일 발열체크
+					\item 	개산대제 및 팔관회
+			\end{itemize}
+			\end{block}
+		\end{frame}
+		
+
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{11월  }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {11월 }
+			\begin{itemize}
+					\item [03] 화 	지장재일 발열체크
+					\item [15] 일 	초하루법회 발열체크
+			\end{itemize}
+			\end{block}
+		\end{frame}
+		
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{12월  }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {12월 }
+			\begin{itemize}
+					\item [02] 수		지장재일 발열체크
+					\item [11] 금		동문의 밤 및 회장 이취임식 
+					\item [20] 일		동지새알 빚기
+					\item [21] 월		동지팥죽나눔행사
+					\item [31] 금		범어사 타종식
+					\item 범어사 김장
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	========================================================== 	회의 
+	%		Frame
+	%	----------------------------------------------------------
+		\part{회의 }
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+		
+				
+		
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{제3차 운영위윈회의 7월 21일 화 }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {제3차 운영위윈회의 7월 21일 화 }
+			\begin{itemize}
+				\item 휴무
+				\item 동아대 병원 정기 검진 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 8월 19일 수
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{기수 회장 총무 회의 8월 19일 수 }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {기수 회장 총무 회의 8월 19일 수 }
+			\begin{itemize}
+				\item 기수 회장 총무 회의 8월 19일 수 
+				\item 오후 7시
+				\item 문화관 법당
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 9월 11일
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{일일찻집 9월 11일 금요일 }
+%		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {일일찻집 9월 11일 금요일 }
+			\begin{itemize}
+				\item 일일찻집
+				\item 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	========================================================== 	무료급식 
+	%		Frame
+	%	----------------------------------------------------------
+		\part{무료급식}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	 ---------------------------------------------------------- 8월 13일 
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{8월 13 목}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {8월 13 목}
+			\begin{itemize}
+				\item 8월 13 목
+  				\item 19학번 주간 (삼보회)
+				\item  간편식
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	========================================================== 	다라니기도
+	%		Frame
+	%	----------------------------------------------------------
+		\part{다라니 기도}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+
+	%	========================================================== 	조직
+	%		Frame
+	%	----------------------------------------------------------
+		\part{조직}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	 ---------------------------------------------------------- 조직
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{조직}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {조직}
+			\begin{itemize}
+				\item 잘하자 18 ** ( * )
+  				\item 21 80 17 23 ( 1 )
+				\item ! gy 4615 379 
+			\end{itemize}
+			매주 수요일 패스워드 변경 
+			\end{block}
+		\end{frame}
+
+
+
+
+	%	 ---------------------------------------------------------- 울산지사
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 조직}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {조직}
+			\begin{itemize}
+				\item 지사장	박태완	010 - 3341 - 9636
+				\item 고객지원팀장	윤남구	010 - 8806 - 5700
+				\item 도로안전팀장	손정줄	010 - 6312 - 8506
+				\item 교통안전팀장	하규영	010 - 9145 - 5246
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 시공사 호산건설
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 고객 지원팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {호산건설  }
+			\begin{itemize}
+				\item 성환국 현장 소장 3847 8556
+				\item 강봉준 공무 차장 2851 9312
+				\item 박대일 공사 과장 5449 1587
+				\item 곽대승 공사 주임 9493 5740
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 시공사 무성토건
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 도로 안전팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {무성토건 }
+			\begin{itemize}
+				\item 정문경 현장 소장 4597 6705
+				\item 송봉건 공사 차장 2869 1891
+				\item 윤종민 작업 반장 6400 2811
+				\item 백호우 박  철
+				\item 크레인 유영철
+				\item 항타기 허동호
+				\item 항타공 김명국
+				\item 항타공 이윤근
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 관련업체 
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 교통안전팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {관련 업체}
+			\begin{itemize}
+				 \setlength{\leftmargin}	{18.0em} 
+				 \setlength{\labelwidth}	{18em} 
+				 \setlength{\labelsep}	{1em}
+				\item \textbf{폐기물} 호생환경 제인환 대리 9646 3966
+				\item \textbf{폐기물} 삼우 우리콘 박찬영 과장 6700 0689
+				\item \textbf{PC BOX} KC산업 책임 하승호 2997 4889
+				\item \textbf{가시설} 와우스틸 김홍직 전무 4644 4046 : 띠장 H형강 면천 4월3일 공장 검수 
+				\item \textbf{가시설} 엠스틸 장광식 차장 7447 2224 : 강관 스트러트 진천  4월3일 공장 검수
+
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 거래처
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{거래처}
+		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {거래처 }
+			\begin{itemize}
+				\item 복사기 
+				\item 물
+				\item  
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+
+		\begin{frame} [t,plain]
+			\begin{block} {복사기 }
+			\begin{itemize}
+				\item 업체명 : 대승솔류션
+				\item 사업자번호 : 605  08 80654 
+				\item 담당자   :  강재욱 010 4566  8063
+				\item  계약 : 칼(5,000매 100원 ) 흑(3,000매 10원)  140,000 14일 기준
+				\item  계약 기간 : 2019년 11월 14일 부터 2020년 10월 13일 12개월간 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+		\begin{frame} [t,plain]
+			\begin{block} {생수 }
+			\begin{itemize}
+				\item 담당자 
+				\item 연락처
+				\item  단가 :  1통당 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+% ------------------------------------------------------------------------------ ------------------------------------------------------------------------------ ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------ ------------------------------------------------------------------------------ ------------------------------------------------------------------------------
+\end{document}
+
+
+	%	----------------------------------------------------------
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame} [c]
+%		\begin{frame} [b]
+%		\begin{frame} [t]
+		\frametitle{감리 보고서}
+		\end{frame}						
+

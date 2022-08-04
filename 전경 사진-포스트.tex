@@ -1,0 +1,248 @@
+%	------------------------------------------------------------------------------
+%
+%		작성 : 2020년 
+%				7월 
+%				04일 
+%				첫 작업
+%
+%
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a0paper, landscape]{tikzposter}
+%	\documentclass[25pt, a1paper ]{tikzposter}
+	\documentclass[	20pt, 
+							a1paper, 
+							portrait, %
+							margin=0mm, %
+							innermargin=10mm,  		%
+%							blockverticalspace=4mm, %
+							colspace=5mm, 
+							subcolspace=0mm
+							]{tikzposter}
+
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+
+% 	12pt  14pt 17pt  20pt  25pt
+%
+%	a0 a1 a2
+%
+%	landscape  portrait
+%
+
+	%% Tikzposter is highly customizable: please see
+	%% https://bitbucket.org/surmann/tikzposter/downloads/styleguide.pdf
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+
+
+%% Available themes: see also
+%% https://bitbucket.org/surmann/tikzposter/downloads/themes.pdf
+%	\usetheme{Default}
+%	\usetheme{Rays}
+%	\usetheme{Basic}
+	\usetheme{Simple}
+%	\usetheme{Envelope}
+%	\usetheme{Wave}
+%	\usetheme{Board}
+%	\usetheme{Autumn}
+%	\usetheme{Desert}
+
+%% Further changes to the title etc is possible
+%	\usetitlestyle{Default}			%
+%	\usetitlestyle{Basic}				%
+%	\usetitlestyle{Empty}				%
+%	\usetitlestyle{Filled}				%
+%	\usetitlestyle{Envelope}			%
+%	\usetitlestyle{Wave}				%
+%	\usetitlestyle{verticalShading}	%
+
+
+%	\usebackgroundstyle{Default}
+%	\usebackgroundstyle{Rays}
+%	\usebackgroundstyle{VerticalGradation}
+%	\usebackgroundstyle{BottomVerticalGradation}
+%	\usebackgroundstyle{Empty}
+
+%	\useblockstyle{Default}
+%	\useblockstyle{Basic}
+%	\useblockstyle{Minimal}		% 이것은 간단함
+%	\useblockstyle{Envelope}		% 
+%	\useblockstyle{Corner}		% 사각형
+%	\useblockstyle{Slide}			%	띠모양  
+	\useblockstyle{TornOut}		% 손그림모양
+
+
+	\usenotestyle{Default}
+%	\usenotestyle{Corner}
+%	\usenotestyle{VerticalShading}
+%	\usenotestyle{Sticky}
+
+%	\usepackage{fontspec}
+%	\setmainfont{FreeSerif}
+%	\setsansfont{FreeSans}
+
+%	------------------------------------------------------------------------------ 제목
+
+	\title{범어사 금정불교대학 동문회}
+
+	\author{ 2020년 7월 }
+
+%	\institute{서영엔지니어링}
+%	\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+
+	%% Optional title graphic
+	%\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+	%% Uncomment to switch off tikzposter footer
+	% \tikzposterlatexaffectionproofoff
+
+\begin{document}
+
+	\maketitle
+
+	\begin{columns}
+
+		\column{0.5}
+
+%	------------------------------------------------------------------------------ 조직
+			\block{■  조직  }
+			{
+					\setlength{\leftmargini}{7em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [회장] 신기열
+					\item [사무총장]정봉호
+					\item [] 김옥희
+					\end{itemize}
+				\end{LARGE}
+			}
+
+%	------------------------------------------------------------------------------ 전번
+			\block{■  전화번호  }
+			{
+					\setlength{\leftmargini}{7em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item 051) 582 7013-4
+					\item 팩스) 582 7011
+					\item [홈페이지] www.beomeosa.co.kr
+					\item [카페] 	http://cafe.daum.net/beomeodongmun1995
+					\item [이메일] 	bbu-meeting@hanmail.net
+
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+%	------------------------------------------------------------------------------ 회비
+			\block{■  회비  }
+			{
+					\setlength{\leftmargini}{4em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [회비]
+					\item [2.] 
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+
+%	------------------------------------------------------------------------------ 수
+			\block{■  수 : 7월 21일  제3차 운영위원회 }
+			{
+					\setlength{\leftmargini}{4em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [일시] 7.21(화) 오후 7시
+					\item [장소] 문화관 법당
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+
+
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.5}
+
+
+%	------------------------------------------------------------------------------ 행사
+			\block{■  행사 : 일요법회  }
+			{
+					\setlength{\leftmargini}{4em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [명칭] 범어사 일요법회
+					\item [일시] 매주 일요일
+					\item [장소] 선문화관
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+
+%	------------------------------------------------------------------------------ 행사
+			\block{■  행사 : 다라니기도 }
+			{
+					\setlength{\leftmargini}{4em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [명칭] 다라니기도
+					\item [일시] 
+					\item [장소] 선문화관
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+%	------------------------------------------------------------------------------ 부의
+			\block{■  행사 : 부의 }
+			{
+					\setlength{\leftmargini}{4em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item  황두원 
+					\item  전대성 
+					\item  방수정 
+					\item  정봉호 
+					\item  신기열 
+					\item  문영훈 
+					\item  구인규 
+					\end{itemize}
+				\end{LARGE}
+			} %	-----------------------------------------------------------------
+
+
+
+	\end{columns}
+
+
+
+
+\end{document}
+
+
+		\begin{huge}
+		\end{huge}
+
+		\begin{LARGE}
+		\end{LARGE}
+
+		\begin{Large}
+		\end{Large}
+
+		\begin{large}
+		\end{large}
+
